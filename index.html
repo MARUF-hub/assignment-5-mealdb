@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to MealDb</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="search-area">
+        <div class="button">
+          <input id="input" type="text" placeholder="Search Your Food..." />
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+      <div id="no-result" class="no-result">
+        <h3>No result found. Please try again!</h3>
+      </div>
+      <div id="loader" class="loader-area">
+        <div class="loader"></div>
+      </div>
+    </section>
+    <section class="meal-section">
+      <div id="mealDetails" class="mealDetails"></div>
+      <div id="meals" class="meals"></div>
+    </section>
+
+    <!-- =============== js =========== -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

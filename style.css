@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow-x: hidden;
+  background: black;
+}
+.search-area {
+  margin-top: 4rem;
+  height: 10rem;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button input {
+  width: 35rem;
+  outline: none;
+  padding: 0.8rem 3rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 0.5px solid rgba(128, 128, 128, 0.73);
+  font-size: 1.8rem;
+}
+.button button {
+  color: white;
+  background: #0d6efd;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.8rem;
+  padding: 1rem 1rem;
+  margin-left: -0.2rem;
+  cursor: pointer;
+}
+.button button:hover {
+  background: #276acf;
+}
+.button button:active {
+  background: #2459a9;
+}
+.no-result {
+  display: none;
+}
+.no-result h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: #f3ff00;
+  margin-top: 10rem;
+}
+
+.loader-area {
+  margin-top: 10rem;
+  display: none;
+}
+
+.loader {
+  width: 100vw;
+  height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  width: 7rem;
+  height: 7rem;
+  border: 1rem solid #dddddd;
+  border-top: 1rem solid #0819ff;
+  border-radius: 50%;
+  animation: loading 0.8s ease infinite;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.meals {
+  width: 80%;
+  margin: 4rem auto 2rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 0));
+  grid-gap: 3rem;
+}
+.meals .meal {
+  width: 25rem;
+  padding: 2rem 3rem;
+  background: #3a3a3a;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.meals .meal .img-area {
+  width: 19rem;
+  height: 19rem;
+  overflow: hidden;
+}
+.meals .meal img {
+  transition: all 0.3s;
+  width: 100%;
+}
+.meals .meal img:hover {
+  transform: scale(1.2);
+}
+.meals .meal img:active {
+  transform: scale(1);
+}
+.meals .meal h3 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.mealDetails {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  margin: 10rem 0;
+}
+.mealDetails .meal-div {
+  display: flex;
+  gap: 5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.mealDetails .meal-div div {
+  padding: 2rem 10rem 0 2rem;
+}
+.mealDetails .meal-div h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.mealDetails .meal-div li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.mealDetails .meal-div img {
+  width: 40rem;
+}
